@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace SwaggerTraining
@@ -26,12 +27,12 @@ namespace SwaggerTraining
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(); 
 
             // registering the swagger generator
             services.AddSwaggerGen(option =>
             {
-                option.SwaggerDoc("v1" , new Info() { Title = "My API" , Version = "v1"});
+                option.SwaggerDoc("v1" , new OpenApiInfo() { Title = "My API" , Version = "v1"});
             });
         }
 

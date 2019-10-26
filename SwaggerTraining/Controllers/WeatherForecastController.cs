@@ -11,7 +11,7 @@ namespace SwaggerTraining.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        // add nuget : Swashbuckle.AspNetCore
+        // add nuget :  Swashbuckle.AspNetCore -Version 5.0.0-rc4
 
         private static readonly string[] Summaries = new[]
         {
